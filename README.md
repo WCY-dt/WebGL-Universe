@@ -4,7 +4,7 @@
 
 各星球大小、轨道半径、自转和公转周期等数据均来自维基百科，贴图来自 [planet-texture-maps](https://planet-texture-maps.fandom.com/wiki/Planet_Texture_Maps_Wiki)。
 
-这个项目也是图形学课程的结课作业。
+这个项目也是东南大学图形学课程的结课作业。
 
 - 项目地址：[github.com/WCY-dt/WebGL-Universe](https://github.com/WCY-dt/WebGL-Universe)
 - 项目 Demo：[ch3nyang.top/WebGL-Universe](https://ch3nyang.top/WebGL-Universe)
@@ -14,7 +14,7 @@
 - 你可以克隆本项目
 
   ```shell
-  git clone
+  git clone https://github.com/WCY-dt/WebGL-Universe.git
   ```
 
   然后打开 `index.html`。
@@ -42,6 +42,7 @@
 - **特殊处理太阳**：太阳本身是发光的，因此向在片段着色器传入一个全局变量 `u_isSun` 用于标记是否是太阳。如果是太阳，则不计算光照，直接贴上纹理。
 - **场景图**：月球绕着地球转，而地球绕着太阳转，这里使用了具有层级结构的场景图来实现这一点。项目将星球、轨道全部放置在场景图下，后期添加星球更加方便。
 - **轨迹球**：使用轨迹球实现鼠标拖动。
+- **GLSL 文件**：GLSL 程序独立于 JavaScript 文件，这样可以更好地组织代码，也方便调试。
 
 ## TODO
 
