@@ -13,6 +13,15 @@
 
 <body>
     <canvas id="canvas" alt="太阳系动态模型"></canvas>
+    <div id="uiContainer">
+        <div id="ui">
+            <div id="spherePrecision"></div>
+            <div id="planetScale"></div>
+            <div id="sunScale"></div>
+            <div id="orbitScale"></div>
+            <div id="rotationSpeed"></div>
+        </div>
+    </div>
 </body>
 
 <footer>
@@ -20,6 +29,7 @@
     <!-- planet data: https://web.mit.edu/yenjie/www/lm-gb/Space/planets-fact.htm -->
     <script src="./utils/twgl-full.js"></script>
     <script src="./utils/m4.js"></script>
+    <script src="./utils/webgl-ui.js"></script>
     <script src="./utils/flattened-primitives.js"></script>
     <script src="./main.js"></script>
 </footer>

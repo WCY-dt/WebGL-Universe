@@ -1,11 +1,18 @@
 "use strict";
 
-const spherePrecision = 30;
-const planetScale = 0.00005;
-const sunScale = 0.000001;
-const orbitScale = 0.5;
-const rotationSpeed = 0.01;
-const cameraDistance = 2000;
+var spherePrecision = 30;
+var planetScale = 0.00005;
+var sunScale = 0.000001;
+var orbitScale = 0.5;
+var rotationSpeed = 0.01;
+var cameraDistance = 2000;
+
+// Setup a ui.
+webglUI.setupSlider("#spherePrecision", { slide: function (event, ui) { spherePrecision = ui.value; main(); }, min: 10, max: 120, step: 10, precision: 0, uiMult: 1, value: 30 });
+webglUI.setupSlider("#planetScale", { slide: function (event, ui) { planetScale = ui.value; main(); }, min: 0.000001, max: 0.0001, step: 0.000001, precision: 5, value: 0.00005 });
+webglUI.setupSlider("#sunScale", { slide: function (event, ui) { sunScale = ui.value; main(); }, min: 0.0000001, max: 0.00001, step: 0.0000005, precision: 5, value: 0.000001 });
+webglUI.setupSlider("#orbitScale", { slide: function (event, ui) { orbitScale = ui.value; main(); }, min: 0.1, max: 1, step: 0.1, precision: 1, value: 0.5 });
+webglUI.setupSlider("#rotationSpeed", { slide: function (event, ui) { rotationSpeed = ui.value; main(); }, min: 0.001, max: 0.05, step: 0.001, precision: 2, value: 0.01 });
 
 var vs, fs;
 
